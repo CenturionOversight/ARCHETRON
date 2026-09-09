@@ -454,6 +454,13 @@ Statements inside a pasted builder, agent, audit, or executor report establish w
 
 Attribute those statements to the report unless Darren separately adopts or authorizes them.
 
+## DR-041 — Read Through Obvious Voice-to-Text Errors
+
+**Established:** 2026-09-09  
+**Basis:** Explicit correction from Darren after the assistant interrupted a conversation to correct an obvious voice-to-text spelling
+
+Darren frequently uses voice-to-text. When transcription produces a malformed spelling or wording but the intended term is clear from context, silently interpret the intended term and continue the conversation. Do not interrupt to correct, confirm, or call attention to obvious transcription spelling errors. Ask one precise question only when the transcription leaves a material ambiguity that affects the task or decision.
+
 ---
 
 Return to the controlling authority:
