@@ -2,46 +2,23 @@
 
 **What does intelligence require before it can be trusted with the future?**
 
-That is the question behind ARCHETRON.
-
 ARCHETRON is the technology ecosystem built by **VOLSHi**.
 
-AI is getting more capable very quickly. But being capable is not the same thing as being trustworthy.
+AI capability is accelerating. Capability alone is not trust.
 
-If an AI system is going to do important work, we need more than a good answer at the end. We need to know what happened while the work was being done. We need to know what information the system used, what changed, what failed, where human approval mattered, and whether the result can be checked later.
+If intelligent systems are going to act with increasing autonomy, we need infrastructure around the model that can observe what happened, preserve evidence, establish what information supports, allocate attention, control consequential boundaries, learn without losing provenance, escalate to humans when required, and leave an inspectable record behind.
 
-ARCHETRON exists to provide that missing layer.
+That is ARCHETRON.
 
 ## The thesis
 
-Most of today's AI stack is focused on making models smarter.
+Most of the AI stack is focused on making models smarter.
 
-We think the next problem is different:
+ARCHETRON addresses the next problem:
 
-**How do you safely operate intelligence once it can act on its own?**
+> **How do you safely operate intelligence once it can act on its own?**
 
-That requires systems around the model.
-
-Systems that can:
-
-- see what is happening
-- preserve what happened
-- understand what the data supports
-- decide where attention should go
-- control important boundaries
-- keep people in the loop when they matter
-- build software in a repeatable way
-- show enough evidence that the work can be checked later
-
-Those systems form ARCHETRON.
-
-## ARCHETRON is the ecosystem
-
-**VOLSHi is the company. ARCHETRON is the ecosystem.**
-
-ARCHETRON is the collective system formed when its independent engines, applications, sensing layers, governance components, and operator controls work together.
-
-Each project solves a different part of the problem. Some are useful on their own. Together, they form ARCHETRON.
+The answer is not one giant agent. It is a set of deliberately separated systems with clear responsibilities and authority boundaries.
 
 ```text
                               ARCHETRON
@@ -50,6 +27,9 @@ Each project solves a different part of the problem. Some are useful on their ow
         PEEP                ERIE                  ARCHE
           │                   │                     │
           └───────────────────┼─────────────────────┘
+                              │
+                       LEARN / DEVELOP
+                            ELLE
                               │
                          GOVERN / WATCH
                       BOUNCER • RATTER
@@ -63,141 +43,98 @@ Each project solves a different part of the problem. Some are useful on their ow
        ARCHEMADA                                SHERLOCK
           │
      ARCHESTRATOR
-
-                     PERSONA CREATION
-                          NIRMATA
-                              │
-                            ARCHE
 ```
 
-The point is not that everything has to run through one giant program.
+Each system has a job. Some are useful independently. Together, they form ARCHETRON.
 
-The point is that each system has a clear job and can work with the others without becoming the others.
+## The systems
 
-## The pieces
+### [ARCHE](https://github.com/ArchePersona/ARCHE-info)
 
-### ARCHE
+ARCHE is the attention engine. It allocates finite cognition according to accumulated pressure, anticipated consequence, and user cost.
 
-ARCHE is an attention engine.
+**Question:** Where should the next unit of cognition be spent?
 
-Intelligence has limited time, context, compute, and attention. ARCHE decides where the next unit of cognition should be spent based on pressure, consequence, and user cost.
+### [ERIE](https://github.com/ArchePersona/ERIE-info)
 
-It does not decide what is true. It decides what deserves attention next.
+ERIE — Epistemic Retrieval & Intelligence Engine — owns evidence-grounded investigation, structured knowledge, provenance, and the boundary between what is known and what is merely asserted.
 
-### NIRMATA
+**Question:** What do I know, and why?
 
-NIRMATA is the persona creation engine for ARCHE.
+### [ELLE](https://github.com/CenturionOversight/ELLE)
 
-It is responsible for creating the personas that ARCHE can run.
+ELLE — External Learning Loop Engine — externalizes developmental learning from any individual model. It preserves what experience taught the system, why it learned it, and the provenance behind behavioral change.
 
-### ERIE
+**Question:** What did I learn, and why?
 
-**ERIE — Epistemic Retrieval & Intelligence Engine** — transforms disconnected data into structured evidence with context, relationships, and provenance.
+### [PEEP](https://github.com/ArchePersona/PEEP-info)
 
-Its job is to help other systems understand what the available data actually supports.
+PEEP observes real execution across terminals, IDEs, runtimes, browsers, CI systems, and other execution surfaces and normalizes those observations for authorized downstream systems.
 
-### PEEP
+**PEEP sees.**
 
-PEEP is the sensing layer.
+### [RATTER](https://github.com/ArchePersona/RATTER-info)
 
-It watches real execution — terminals, IDEs, runtimes, browsers, CI systems, and other sources — and turns what it observes into a common stream of events.
-
-PEEP does not reason, build, or govern.
-
-**It sees.**
-
-### RATTER
-
-RATTER is the observation and telemetry engine.
-
-It gives operators a live view of what systems are doing and preserves the operational record needed to inspect behavior later.
+RATTER is the operational telemetry engine. It preserves an independent record of observable system activity so operators can inspect what actually happened.
 
 ### BOUNCER
 
-BOUNCER is the authority and governance engine.
-
-When something crosses an important boundary, BOUNCER decides whether it should be approved, denied, paused, resumed, escalated, revoked, or sent to a human for authorization.
+BOUNCER is the authority and governance engine. It controls consequential boundaries: approve, deny, pause, resume, escalate, revoke, or require human authorization.
 
 ### CTRL TOWER
 
-CTRL TOWER is the operator-facing control application for the ecosystem.
+CTRL TOWER is the operator-facing control surface for live system state, execution activity, telemetry, governance, cost, and human intervention.
 
-It is where a person can see live system state, execution activity, telemetry, governance decisions, costs, and anything that needs human attention.
+### [ARCHESTRATOR](https://github.com/CenturionOversight/ARCHESTRATOR-info)
 
-### ARCHESTRATOR
+ARCHESTRATOR is the software-engineering lifecycle engine. It carries approved engineering work through execution, state, verification, continuation, and inspection without relying on a chat transcript as the system of record.
 
-ARCHESTRATOR is the software engineering engine.
+### [ARCHEMADA](https://github.com/ArchePersona/ARCHEMADA-info)
 
-Most AI coding tools focus on producing code. ARCHESTRATOR manages the work around the code: planning, execution, verification, progress, saved state, and a record of what happened.
+ARCHEMADA is a user-facing software-engineering application built around controlled planning, explicit approval, durable state, bounded execution, verification, and writeback.
 
-It is the engine underneath ARCHEMADA.
+### [SHERLOCK](https://github.com/ArchePersona/SHERLOCK-info)
 
-### ARCHEMADA
+SHERLOCK is the evidence-reconstruction and investigation application. It rebuilds scattered conversations, files, attachments, code, and timelines into an inspectable case record so questions can be answered from evidence instead of memory.
 
-ARCHEMADA is the user-facing software engineering application.
+### [DEVSnitcher](https://github.com/CenturionOversight/devsnitcher)
 
-The idea is simple: describe what you want built, work through the important planning decisions, approve the plan, and let the system carry the work through a controlled engineering process.
-
-### SHERLOCK
-
-SHERLOCK is an evidence reconstruction application.
-
-It takes messy project history — conversations, files, documents, code, attachments, and timelines — and rebuilds what happened so people can answer questions from evidence instead of memory.
-
-### DEVSnitcher
-
-DEVSnitcher is the local-first browser evidence-capture utility.
-
-Press **SNITCH**, and it collects the evidence already surrounding a browser failure — console errors, failed requests, runtime exceptions, environment details, and useful page context — redacts obvious secrets, and packages the result into a portable report for an AI assistant, issue, chat, or human debugger.
-
-It does not diagnose the bug, call an AI, require an account, or depend on a backend. Its job is to make the evidence at the browser edge easy to capture and move.
-
-Within the larger ARCHETRON evidence model, DEVSnitcher is deliberately narrow: capture first. Deeper reconstruction and evidence reasoning belong to systems such as SHERLOCK and ERIE.
+DEVSnitcher is a local-first browser evidence-capture utility. It packages the evidence surrounding browser failures into a portable report without pretending capture is diagnosis.
 
 ## Why separate systems?
 
-Because giant AI systems become impossible to trust when every responsibility is mixed together.
+Because trust collapses when observation, evidence, judgment, authority, execution, and learning are allowed to blur into one opaque agent.
 
 The thing that watches execution should not quietly become the thing that grants permission.
 
-The thing that decides what the data supports should not also decide where cognitive attention goes.
+The thing that establishes what evidence supports should not decide what the system learns from experience.
 
-The application a person uses should not have to own the engine underneath it.
+The thing that allocates attention should not silently acquire execution authority.
 
-ARCHETRON is built around clear boundaries so each part can be inspected, replaced, tested, and improved without turning the entire ecosystem into one giant black box.
+The model should not define the boundaries around its own behavior.
 
-## What VOLSHi is trying to prove
+ARCHETRON keeps those responsibilities explicit so they can be inspected, replaced, tested, and governed independently.
 
-The long-term bet behind ARCHETRON is that trustworthy autonomous intelligence will need more than models.
+## The larger bet
 
-It will need infrastructure for observation, evidence, governance, attention, execution, history, and human control.
+VOLSHi is building infrastructure for autonomous intelligence that can be observed, governed, questioned, corrected, and held to evidence.
 
-VOLSHi is building those pieces now.
+The goal is not another layer of dashboards around AI.
 
-Not because AI needs more dashboards.
+The goal is to make increasingly capable intelligence answerable to a stronger question:
 
-Because if intelligence is going to take on more responsibility, we need better answers to a much more important question:
+> **Why should we trust what it just did?**
 
-**Why should we trust what it just did?**
+## Explore the ecosystem
 
-## The Nerd Section
+- [ARCHE](https://github.com/ArchePersona/ARCHE-info) — attention
+- [ERIE](https://github.com/ArchePersona/ERIE-info) — evidence, knowledge, and investigation
+- [ELLE](https://github.com/CenturionOversight/ELLE) — developmental learning
+- [PEEP](https://github.com/ArchePersona/PEEP-info) — execution observation
+- [RATTER](https://github.com/ArchePersona/RATTER-info) — operational telemetry
+- [ARCHEMADA](https://github.com/ArchePersona/ARCHEMADA-info) — software-engineering application
+- [ARCHESTRATOR](https://github.com/CenturionOversight/ARCHESTRATOR-info) — software-engineering lifecycle
+- [SHERLOCK](https://github.com/ArchePersona/SHERLOCK-info) — evidence reconstruction
+- [DEVSnitcher](https://github.com/CenturionOversight/devsnitcher) — browser-edge evidence capture
 
-The public idea is simple: make autonomous intelligence easier to observe, govern, verify, and trust.
-
-The implementation is intentionally split across independent engines, applications, event boundaries, persisted state, provenance, and operator controls. The individual repositories contain the technical material that is appropriate to publish for each system.
-
-## Ecosystem repositories
-
-- **[ARCHE](https://github.com/ArchePersona/ARCHE-info)** — attention engine
-- **[ARCHEMADA](https://github.com/ArchePersona/ARCHEMADA-info)** — software engineering application
-- **[ARCHESTRATOR](https://github.com/CenturionOversight/ARCHESTRATOR-info)** — software engineering engine
-- **[ERIE](https://github.com/ArchePersona/ERIE-info)** — Epistemic Retrieval & Intelligence Engine
-- **[SHERLOCK](https://github.com/ArchePersona/SHERLOCK-info)** — evidence reconstruction
-- **[DEVSnitcher](https://github.com/CenturionOversight/DEVSnitcher)** — local-first browser evidence capture and portable debugging reports
-- **[PEEP](https://github.com/ArchePersona/PEEP-info)** — execution observation
-- **[RATTER](https://github.com/ArchePersona/RATTER-info)** — telemetry and operational observation
-- **BOUNCER** — authority and governance
-- **CTRL TOWER** — operator control application
-- **NIRMATA** — persona creation engine for ARCHE
-
-**Together, they are ARCHETRON. ARCHETRON is a VOLSHi technology ecosystem.**
+**VOLSHi is the company. ARCHETRON is the ecosystem.**
