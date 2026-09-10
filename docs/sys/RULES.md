@@ -472,6 +472,19 @@ Prefer an immutable annotated Git tag when the authorized tooling supports it. I
 
 Before creating the marker, verify the authorized repository and exact remote commit. Report the repository, marker name, and full commit SHA. A repository baseline records repository state only; do not claim that it proves local, configuration, or deployed state unless those surfaces were separately verified.
 
+## DR-043 — Deadline-Critical Builder Instructions Must Constrain the Failure Surface
+
+**Established:** 2026-09-11  
+**Basis:** Concrete workflow failure during live demo repair and Darren's correction that the builder was left ambiguity without accounting for his deadline-critical situation
+
+When Darren is at a demo, submission, release, presentation, or other finish-line state with a working or partially working live system, builder instructions must explicitly account for that situation rather than treating the task as ordinary development.
+
+Constrain the builder to the smallest authorized change and explicitly protect known-good behavior. Do not leave destructive or history-rewriting implementation choices implicit. Unless Darren explicitly authorizes otherwise, a builder working on a live deadline-critical state must not amend, rebase, reset, force-push, rewrite deployed history, replace a known-good baseline, or make unrelated changes as part of the repair.
+
+Use additive recovery: new bounded changes on top of the preserved state. Require acceptance evidence that matches the actual user-facing objective rather than substituting repository, deployment, health, source-presence, or unit-test evidence for live behavior when live behavior is what matters.
+
+The assistant must translate known situational constraints into the builder handoff. Do not assume the builder will infer Darren's deadline, blast-radius tolerance, preservation requirements, or definition of success from conversational context it was not explicitly given.
+
 ---
 
 Return to the controlling authority:
