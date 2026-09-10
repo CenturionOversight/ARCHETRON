@@ -461,6 +461,17 @@ Attribute those statements to the report unless Darren separately adopts or auth
 
 Darren frequently uses voice-to-text. When transcription produces a malformed spelling or wording but the intended term is clear from context, silently interpret the intended term and continue the conversation. Do not interrupt to correct, confirm, or call attention to obvious transcription spelling errors. Ask one precise question only when the transcription leaves a material ambiguity that affects the task or decision.
 
+## DR-042 — Preserve Verified Milestones as Known-Good Repository Baselines
+
+**Established:** 2026-09-10  
+**Basis:** Explicit instruction from Darren after preserving the working HACKASS revision
+
+When Darren establishes or accepts a repository-backed project milestone as working and verified, preserve the exact remote commit as a clearly named known-good baseline before beginning further consequential work.
+
+Prefer an immutable annotated Git tag when the authorized tooling supports it. If tag creation is unavailable, create a dedicated fixed baseline branch at the exact commit SHA. Do not change product files merely to create the marker, and do not move the baseline marker later to a different revision.
+
+Before creating the marker, verify the authorized repository and exact remote commit. Report the repository, marker name, and full commit SHA. A repository baseline records repository state only; do not claim that it proves local, configuration, or deployed state unless those surfaces were separately verified.
+
 ---
 
 Return to the controlling authority:
